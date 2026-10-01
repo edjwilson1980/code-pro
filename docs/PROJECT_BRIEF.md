@@ -26,6 +26,7 @@ Personal / South Side DTF / Client: ______
 - Stack:
 - Hosting:
 - Logins / payments / integrations:
+- MCP add-ons enabled (from TOOLBOX):
 - Open-source repos or packages to reuse:
 
 ## Definition of done

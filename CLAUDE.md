@@ -8,6 +8,7 @@ See `docs/TOOLBOX.md` for every tool installed and when to use it.
 If `docs/PROJECT_BRIEF.md` is missing or has blanks, run the Kickoff Q&A first:
 - Ask in rounds of up to 5 questions, using `docs/KICKOFF_QUESTIONS.md`.
 - Client job? Also ask the Client section (scope, ownership, budget, handoff).
+- Based on the answers (payments, Google, WooCommerce, n8n), add only the matching add-ons from `docs/TOOLBOX.md` to `.mcp.json` and list them in the brief's Tech plan.
 - Fill in `docs/PROJECT_BRIEF.md`, show Ed a one-screen summary, and wait for his OK.
 
 ## 2. Save credits
@@ -34,4 +35,5 @@ If `docs/PROJECT_BRIEF.md` is missing or has blanks, run the Kickoff Q&A first:
 ## 5. Quality and safety
 - Test UI work with Playwright (MCP is in `.mcp.json`) before calling it done.
 - Commit after each working feature with a plain-English message.
+- Payments: build against the Stripe **sandbox** only; switching to live needs Ed's OK.
 - Never commit passwords, API keys, or client credentials. Use environment variables; `.env` is git-ignored. The pre-commit secret scan blocks obvious keys — never bypass it with `--no-verify` without Ed's OK.
