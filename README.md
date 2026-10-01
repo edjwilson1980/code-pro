@@ -17,7 +17,10 @@ The starting point for every app the studio builds, whether for South Side DTF, 
 | `docs/KICKOFF_QUESTIONS.md` | The Q&A question bank, including client-job questions |
 | `docs/PROJECT_BRIEF.md` | The project's blueprint and scope of work |
 | `docs/PROGRESS.md` | Handoff note between sessions, plus who's working on what |
-| `.mcp.json` | Context7 live docs + Playwright browser testing, in cloud and on your PC |
+| `.mcp.json` | Context7 live docs, Playwright browser testing, n8n-mcp, in cloud and on your PC |
+| `docs/TOOLBOX.md` | Every tool installed, optional add-ons, and how to connect n8n |
+| `n8n/` | Exported n8n workflow JSON, version-controlled |
+| `.claude/settings.json` | Turns on the n8n skills plugin automatically |
 | `.claude/agents/` | Cheap Haiku helpers: `docs-writer`, `test-runner`, `quick-edit` |
 | `.githooks/pre-commit` | Secret scan: blocks commits containing API keys or passwords |
 | `scripts/cloud-setup.sh` | Paste into your cloud environment's setup script once |
