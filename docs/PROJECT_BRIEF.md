@@ -42,7 +42,8 @@ Personal / South Side DTF / Client: ______
 ## Budget and deadline
 - Deadline:
 - Credit budget:
-- Model plan (which tasks get top vs. cheaper models):
+- Model plan: default opusplan (Opus plans, Sonnet builds, Haiku helpers). Note any exceptions:
+- Staging location:
 
 ## Client terms (client jobs only)
 - Contact:

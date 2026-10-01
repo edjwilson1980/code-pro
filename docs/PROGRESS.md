@@ -10,6 +10,13 @@ _Nothing built yet. Waiting on Kickoff Q&A._
 |---|---|---|---|
 | | | | |
 
+## Environments
+| | Staging (build here) | Live (Ed's OK only) |
+|---|---|---|
+| URL / location | | |
+| Last backup | | |
+| Last release tag + how to undo | | |
+
 ## Done
 -
 
