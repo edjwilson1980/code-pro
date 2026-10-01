@@ -29,6 +29,13 @@ Personal / South Side DTF / Client: ______
 - MCP add-ons enabled (from TOOLBOX):
 - Open-source repos or packages to reuse:
 
+## Security plan
+- Who can access what:
+- Worst case if breached / broken:
+- Sensitive data handled (and where it's stored):
+- Connections and their access level (sandbox / read-only / live):
+- Compliance (PCI, NDA, other):
+
 ## Definition of done
 -
 

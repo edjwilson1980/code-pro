@@ -23,15 +23,20 @@ Claude asks these in rounds of up to 5. Skip anything already answered.
 12. What does it connect to (WooCommerce, Google Drive, n8n, email, other APIs)?
 13. Any sensitive data (customer info, payments, health)?
 
+## Security
+14. Who should be able to see or change what (admins, staff, customers)?
+15. What's the worst thing that could happen if it broke or got hacked (lost orders, leaked customer data, wrong charges)?
+16. Any rules we must follow (PCI for cards, client NDA, data must stay in the US)?
+
 ## Done and budget
-14. What does "done" look like? How will we test it?
-15. Deadline?
-16. Credit/budget limit for the build?
+17. What does "done" look like? How will we test it?
+18. Deadline?
+19. Credit/budget limit for the build?
 
 ## Client jobs only
-17. Client name, main contact, and how they want updates?
-18. Exact scope: what's included, and what's an extra charge?
-19. Who owns the code at the end? Transfer the repo, or add them to it?
-20. Who pays for hosting, domains, and API services after launch?
-21. Any NDA or rule that code must stay off cloud services?
-22. Payment schedule and handoff checklist (logins, docs, training)?
+20. Client name, main contact, and how they want updates?
+21. Exact scope: what's included, and what's an extra charge?
+22. Who owns the code at the end? Transfer the repo, or add them to it?
+23. Who pays for hosting, domains, and API services after launch?
+24. Any NDA or rule that code must stay off cloud services?
+25. Payment schedule and handoff checklist (logins, docs, training)?

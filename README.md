@@ -4,7 +4,7 @@ The starting point for every app the studio builds, whether for South Side DTF, 
 
 ## Start a new project
 1. On GitHub, click **Use this template**, then **Create a new repository**.
-2. Name it clearly (e.g. `clientname-store-rebuild`) and set it to **Private**.
+2. Name it clearly (e.g. `clientname-store-rebuild`) and set it to **Private** (always for client work).
 3. Open it in Claude: the **Code** tab on your phone or claude.ai/code, or run `claude` in the folder on your PC.
 4. On your PC, run once in the folder: `git config core.hooksPath .githooks` (turns on the secret scan; cloud does this automatically).
 5. Say: **"Start the kickoff."** Claude runs the Q&A and fills in `docs/PROJECT_BRIEF.md`.
@@ -18,6 +18,7 @@ The starting point for every app the studio builds, whether for South Side DTF, 
 | `docs/PROJECT_BRIEF.md` | The project's blueprint and scope of work |
 | `docs/PROGRESS.md` | Handoff note between sessions, plus who's working on what |
 | `.mcp.json` | Context7 live docs, Playwright browser testing, n8n-mcp, in cloud and on your PC |
+| `docs/SECURITY.md` | Security playbook: risk levels, vetting checklist, per-tool risk table |
 | `docs/TOOLBOX.md` | Every tool installed, optional add-ons, and how to connect n8n |
 | `n8n/` | Exported n8n workflow JSON, version-controlled |
 | `.claude/settings.json` | Turns on the n8n skills plugin automatically |

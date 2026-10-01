@@ -50,7 +50,7 @@ Then run `/mcp` in Claude Code and sign in to Stripe. **Pick the sandbox** for b
 "google": {
   "type": "stdio",
   "command": "uvx",
-  "args": ["workspace-mcp", "--tool-tier", "core", "--tools", "drive", "sheets"],
+  "args": ["workspace-mcp==1.30.1", "--tool-tier", "core", "--tools", "drive", "sheets"],
   "env": {
     "GOOGLE_OAUTH_CLIENT_ID": "${GOOGLE_OAUTH_CLIENT_ID:-}",
     "GOOGLE_OAUTH_CLIENT_SECRET": "${GOOGLE_OAUTH_CLIENT_SECRET:-}"

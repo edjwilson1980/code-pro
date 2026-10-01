@@ -1,11 +1,29 @@
 {
-  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "context7",
+    "playwright",
+    "n8n-mcp"
+  ],
   "extraKnownMarketplaces": {
     "n8n-mcp-skills": {
-      "source": { "source": "github", "repo": "czlonkowski/n8n-skills" }
+      "source": {
+        "source": "github",
+        "repo": "czlonkowski/n8n-skills"
+      }
     }
   },
   "enabledPlugins": {
     "n8n-mcp-skills@n8n-mcp-skills": true
+  },
+  "permissions": {
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./**/*.pem)",
+      "Read(./**/*.key)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git commit --no-verify:*)"
+    ]
   }
 }
