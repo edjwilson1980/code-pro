@@ -17,3 +17,6 @@ repomix-output.*
 .serena/
 .DS_Store
 Thumbs.db
+
+# Claude per-machine settings
+.claude/settings.local.json

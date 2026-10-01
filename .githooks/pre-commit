@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Studio secret scan: blocks commits that look like they contain API keys or passwords.
+# Bypass only if you're sure it's a false alarm: git commit --no-verify
+files=$(git diff --cached --name-only --diff-filter=ACM)
+[ -z "$files" ] && exit 0
+pattern='(sk-[A-Za-z0-9_-]{20,}|sk_live_[A-Za-z0-9]{16,}|rk_live_[A-Za-z0-9]{16,}|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z_-]{35}|ghp_[A-Za-z0-9]{36}|github_pat_[A-Za-z0-9_]{40,}|xox[baprs]-[A-Za-z0-9-]{10,}|ck_[a-f0-9]{40}|cs_[a-f0-9]{40}|-----BEGIN [A-Z ]*PRIVATE KEY-----|(password|passwd|secret|api_key|apikey|token)[[:space:]]*[:=][[:space:]]*["'"'"'][^"'"'"']{8,}["'"'"'])'
+hits=""
+for f in $files; do
+  case "$f" in .env.example|.githooks/pre-commit) continue;; esac
+  [ -f "$f" ] || continue
+  m=$(git show ":$f" 2>/dev/null | grep -nIEi "$pattern" | head -3)
+  [ -n "$m" ] && hits="$hits\n  $f:\n$(echo "$m" | sed 's/^/    line /')"
+done
+if [ -n "$hits" ]; then
+  echo "BLOCKED: this commit looks like it contains a secret (API key, password, or private key):"
+  echo -e "$hits"
+  echo "Move it into .env (never committed) and read it from an environment variable."
+  exit 1
+fi
+exit 0
