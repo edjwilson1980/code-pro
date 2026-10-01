@@ -1,0 +1,7 @@
+{
+  "_note": "Watched by .claude/hooks/update-check.mjs at session start. npm packages are read from .mcp.json pins automatically. 'reviewed' = the commit we last security-reviewed.",
+  "github": [
+    { "name": "n8n skills plugin", "repo": "czlonkowski/n8n-skills", "branch": "main", "reviewed": "19cd793f4789e3ef9c657ccf26e097f641a77df0" }
+  ],
+  "checkEveryHours": 24
+}

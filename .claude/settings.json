@@ -26,5 +26,20 @@
       "Bash(git push -f:*)",
       "Bash(git commit --no-verify:*)"
     ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PROJECT_DIR}/.claude/hooks/update-check.mjs\"",
+            "timeout": 60,
+            "statusMessage": "Checking for studio updates..."
+          }
+        ]
+      }
+    ]
   }
 }
