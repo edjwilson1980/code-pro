@@ -24,7 +24,8 @@ The starting point for every app the studio builds, whether for South Side DTF, 
 | `docs/TOOLBOX.md` | Every tool installed, optional add-ons, and how to connect n8n |
 | `n8n/` | Exported n8n workflow JSON, version-controlled |
 | `.claude/settings.json` | Model default, allowed servers, security blocks, update-check hook |
-| `.claude/agents/` | Cheap Haiku helpers: `docs-writer`, `test-runner`, `quick-edit` |
+| `.claude/agents/` | `design-director` (look, feel, ease of use) + cheap Haiku helpers: `docs-writer`, `test-runner`, `quick-edit` |
+| `docs/design/` | Design system, UI review checklist, direction mockups, review notes (owned by the design director) |
 | `.githooks/pre-commit` | Secret scan: blocks commits containing API keys or passwords |
 | `scripts/cloud-setup.sh` | Paste into your cloud environment's setup script once |
 | `.env.example` | Where keys go (as `.env`, which is never uploaded) |

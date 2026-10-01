@@ -20,3 +20,6 @@ Thumbs.db
 
 # Claude per-machine settings
 .claude/settings.local.json
+
+# Design review screenshots (sent to Ed, not committed)
+.design-shots/

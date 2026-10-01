@@ -28,7 +28,9 @@ Every project runs in this order. Don't skip ahead.
 - Show Ed one table with 3 to 5 skills at most, plus connections: what each one is, why this project needs it, and a `Security:` line. Add only what he approves, record it in the PRD's Tech plan, and add any plugin repos to `.claude/update-watch.json`.
 - Found a good skill that isn't in `docs/SKILLS.md`? Propose adding it to the library for future projects.
 
-**Step 4: Build.**
+**Step 4: Design direction (projects with screens).** Call the `design-director` agent, using the top model for this step only. It shows Ed 2 to 3 visual directions as phone and desktop mockups; he picks; it fills in `docs/design/DESIGN_SYSTEM.md`. Skip this for automations and back-end-only work.
+
+**Step 5: Build.**
 
 **During the project: keep skills current.** The daily update pass rechecks this project's skills. When the project changes (new feature, new integration, moving to launch), rerun a mini skill hunt for just that change. Add, update or remove skills with Ed's OK. For example, add `claude-security` before launch and remove it after.
 
@@ -78,12 +80,18 @@ Follow `docs/SECURITY.md`. In short:
 
 ## 7. Prove it, don't claim it
 A feature isn't done until Ed has proof he can check from his phone. Every "done" report includes:
-1. **Screenshots** (phone width and desktop) or a short screen recording/GIF of it working, captured with Playwright on staging.
+1. **Screenshots** (phone width and desktop) or a short screen recording/GIF of it working, captured with Playwright on staging. For screens, include the design review score.
 2. **"Test it yourself" in 3 steps or fewer**, in plain English, with the exact staging link. For example: "1. Open the link. 2. Add a 22-inch gang sheet to the cart. 3. Check it appears in Drive > Orders."
 3. **What changed and what didn't**: one line each, plus any known limits.
 Never say "should work" or "done" without the proof. If something can't be shown (a background job, say), show the log or the result it produced (the file in Drive, the order note, the email received).
 
-## 8. Quality and safety
+## 8. Design director (projects with screens)
+- One project, two roles: the senior engineer leads and builds; the `design-director` agent owns look, feel and ease of use. Its lane is `docs/design/` and style/theme files, and it makes visual-only changes, never logic.
+- **Every new or changed screen gets a design review** (`docs/design/UI_REVIEW_CHECKLIST.md`) before it counts as done. It must score PASS (8/10 or better, no must-fix items). The "prove it" screenshots Ed gets are post-review.
+- **Before launch:** the design director walks the main path on a phone and signs off. No launch without it.
+- Cost: reviews run on the mid-tier model; only the direction step uses the top model.
+
+## 9. Quality and safety
 - Test UI work with Playwright (MCP is in `.mcp.json`) before calling it done.
 - Commit after each working feature with a plain-English message.
 - Payments: build against the Stripe **sandbox** only; switching to live needs Ed's OK.

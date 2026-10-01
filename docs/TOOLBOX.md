@@ -8,6 +8,7 @@ What's installed, what it's for, and what's optional. Updated 2026-10-01.
 | **Context7** (MCP) | Live, version-correct docs for any library | No guessing APIs, no rework |
 | **Playwright** (MCP) | Opens the app in a browser, clicks through it, screenshots | Catches broken UI before Ed sees it |
 | **Auto-update check** (session-start hook) | Free version check every open, plus a daily research pass | Keeps us current without paying twice a day |
+| **Design director** (`.claude/agents/design-director.md`) | Picks the look with you, reviews every screen at phone and desktop size, signs off before launch | Catches "works but looks off" before you see it |
 | **Haiku helpers** (`.claude/agents/`) | `docs-writer`, `test-runner`, `quick-edit` | Cheap model for cheap work |
 | **Secret scan** (`.githooks/pre-commit`) | Blocks commits containing keys/passwords | Prevents a very expensive mistake |
 
