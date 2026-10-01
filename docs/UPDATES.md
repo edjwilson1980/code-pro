@@ -19,10 +19,11 @@ Last checked: 2026-10-01
    | WooCommerce / WordPress | developer.woocommerce.com blog, WordPress security releases |
    | Security | GitHub security advisories for every package we pin; run `npm audit` if the project has a package.json |
 3. **Project-specific:** read the Tech plan in `docs/PROJECT_BRIEF.md` and search for updates, deprecations or security issues in that stack (e.g. a client's framework or plugin).
-4. **Log it:** add an entry at the top of the log below and update "Last checked". Max 5 bullets. For each one: what changed, whether it matters to us, and the suggested action. Include a `Security:` line for anything we'd install or upgrade.
-5. **Report to Ed** in 1 to 3 lines before starting his task. Example: "Updates: n8n 2.40 adds X (useful for gang-sheet flow). Playwright MCP has a new version; want me to review and bump it?"
-6. **Never auto-apply.** Version bumps, new tools and rule changes wait for Ed's OK. After approval: review the release notes and the scripts it runs, bump the pin (`.mcp.json` or `.claude/update-watch.json` "reviewed"), commit, and note it here.
-7. **Getting smarter:** if an update changes how we should work (a new Claude Code feature that saves credits, a deprecation), propose the exact `CLAUDE.md` or `TOOLBOX.md` edit to Ed.
+4. **Skills check:** look for new or updated official skills and plugins that fit **this project's** stack: the official marketplace (anthropics/claude-plugins-official), anthropics/skills, and vendor repos for tools in the brief. Compare against `docs/SKILLS.md` and what's installed. Propose additions or removals with a `Security:` line; never auto-add. If a new skill would help many projects, propose adding it to the `SKILLS.md` match table.
+5. **Log it:** add an entry at the top of the log below and update "Last checked". Max 5 bullets. For each one: what changed, whether it matters to us, and the suggested action. Include a `Security:` line for anything we'd install or upgrade.
+6. **Report to Ed** in 1 to 3 lines before starting his task. Example: "Updates: n8n 2.40 adds X (useful for gang-sheet flow). Playwright MCP has a new version; want me to review and bump it?"
+7. **Never auto-apply.** Version bumps, new tools and rule changes wait for Ed's OK. After approval: review the release notes and the scripts it runs, bump the pin (`.mcp.json` or `.claude/update-watch.json` "reviewed"), commit, and note it here.
+8. **Getting smarter:** if an update changes how we should work (a new Claude Code feature that saves credits, a deprecation), propose the exact `CLAUDE.md` or `TOOLBOX.md` edit to Ed.
 
 ## Log
 <!-- Newest first. Format:

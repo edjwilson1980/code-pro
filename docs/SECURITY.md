@@ -37,8 +37,8 @@ High-risk access is only turned on with Ed's OK, for a specific task, and turned
 |---|---|---|
 | Context7 | Low | Sends your library questions to Upstash's server. Don't paste private code into queries. |
 | Playwright MCP 0.0.83 | Medium | Drives a real browser. It can click anything on any site it's pointed at, and pages can contain prompt injection. Use on our own sites and test accounts. |
-| n8n-mcp 2.91.0 | Low without key / **High** with production key | With an API key it can create, edit and delete workflows and manage credentials. Use a key from a test project or user first. |
-| n8n skills plugin (commit 19cd793) | Low | Hook scripts reviewed: they only print reminders, with no network calls. Comes from a third-party repo, so re-review after updates. |
+| n8n-mcp 2.91.0 (added per project) | Low without key / **High** with production key | With an API key it can create, edit and delete workflows and manage credentials. Use a key from a test project or user first. |
+| n8n skills plugin (commit 19cd793, added per project) | Low | Hook scripts reviewed: they only print reminders, with no network calls. Comes from a third-party repo, so re-review after updates. |
 | Stripe (official) | Medium sandbox / **High** live | Sign in with OAuth and choose the sandbox. Stripe makes you approve refunds and payouts. |
 | Workspace MCP 1.30.1 | Medium / **High** | Can read and send Gmail and edit Drive. Use `--read-only` and only the needed `--tools`. |
 | Secret scan hook | Protective | Pattern-based, so it catches common key formats, not everything. |

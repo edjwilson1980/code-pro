@@ -2,20 +2,8 @@
   "model": "opusplan",
   "enabledMcpjsonServers": [
     "context7",
-    "playwright",
-    "n8n-mcp"
+    "playwright"
   ],
-  "extraKnownMarketplaces": {
-    "n8n-mcp-skills": {
-      "source": {
-        "source": "github",
-        "repo": "czlonkowski/n8n-skills"
-      }
-    }
-  },
-  "enabledPlugins": {
-    "n8n-mcp-skills@n8n-mcp-skills": true
-  },
   "permissions": {
     "deny": [
       "Read(./.env)",

@@ -14,7 +14,8 @@ The session-start hook prints a **STUDIO UPDATE CHECK**. Act on it before anythi
 If `docs/PROJECT_BRIEF.md` is missing or has blanks, run the Kickoff Q&A first:
 - Ask in rounds of up to 5 questions, using `docs/KICKOFF_QUESTIONS.md`.
 - Client job? Also ask the Client section (scope, ownership, budget, handoff).
-- Based on the answers (payments, Google, WooCommerce, n8n), add only the matching add-ons from `docs/TOOLBOX.md` to `.mcp.json` and list them in the brief's Tech plan.
+- Based on the answers (payments, Google, WooCommerce, n8n), add only the matching connections from `docs/TOOLBOX.md` to `.mcp.json` and list them in the brief's Tech plan.
+- **Skills:** match the project against `docs/SKILLS.md` and propose 3 to 5 at most, each with why and a `Security:` line. Add only what Ed approves. Never install skills just because they exist.
 - Fill in `docs/PROJECT_BRIEF.md`, show Ed a one-screen summary, and wait for his OK.
 
 ## 2. Save credits
@@ -39,7 +40,7 @@ If `docs/PROJECT_BRIEF.md` is missing or has blanks, run the Kickoff Q&A first:
 - Merge one branch at a time; resolve conflicts before starting the next merge.
 
 ## 4. n8n automations
-- Use the `n8n-mcp` tools and the n8n skills plugin. Look up and validate nodes before building; never guess node settings.
+- n8n projects add `n8n-mcp` + the n8n skills plugin at kickoff (`docs/SKILLS.md`). Use them. Look up and validate nodes before building; never guess node settings.
 - Search n8n's template library (via n8n-mcp) for an existing workflow before building from scratch.
 - Build on a `[TEST]` copy, validate, run it with test data, then show Ed before touching a live workflow (order, payment and customer flows especially).
 - Export every changed workflow to `n8n/<name>.json` and commit it. No credentials in workflow JSON.

@@ -27,6 +27,7 @@ Personal / South Side DTF / Client: ______
 - Hosting:
 - Logins / payments / integrations:
 - MCP add-ons enabled (from TOOLBOX):
+- Skills/plugins added (from SKILLS.md, Ed-approved):
 - Open-source repos or packages to reuse:
 
 ## Security plan
