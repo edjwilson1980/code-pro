@@ -1,0 +1,19 @@
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies and builds
+node_modules/
+vendor/
+dist/
+build/
+.next/
+
+# Tool output
+repomix-output.*
+.serena/
+.DS_Store
+Thumbs.db
