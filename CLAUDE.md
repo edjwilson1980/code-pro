@@ -10,13 +10,25 @@ The session-start hook prints a **STUDIO UPDATE CHECK**. Act on it before anythi
 - If tools have newer versions, mention it in one line. **Never install, upgrade or bump a pin without Ed's OK.** Updates get the same security review as new tools.
 - If the hook didn't run (no output), run `node .claude/hooks/update-check.mjs` yourself.
 
-## 1. No code before the brief
-If `docs/PROJECT_BRIEF.md` is missing or has blanks, run the Kickoff Q&A first:
+## 1. No code before the brief (our PRD)
+Every project runs in this order. Don't skip ahead.
+
+**Step 1: Kickoff Q&A.** If `docs/PROJECT_BRIEF.md` (the product requirements document, or PRD) is missing or has blanks:
 - Ask in rounds of up to 5 questions, using `docs/KICKOFF_QUESTIONS.md`.
 - Client job? Also ask the Client section (scope, ownership, budget, handoff).
-- Based on the answers (payments, Google, WooCommerce, n8n), add only the matching connections from `docs/TOOLBOX.md` to `.mcp.json` and list them in the brief's Tech plan.
-- **Skills:** match the project against `docs/SKILLS.md` and propose 3 to 5 at most, each with why and a `Security:` line. Add only what Ed approves. Never install skills just because they exist.
-- Fill in `docs/PROJECT_BRIEF.md`, show Ed a one-screen summary, and wait for his OK.
+
+**Step 2: Write the PRD.** Fill in `docs/PROJECT_BRIEF.md`, show Ed a one-screen summary, and wait for his OK. No skills, add-ons or code yet.
+
+**Step 3: Skill hunt (only after the PRD is approved).** Now that we know exactly what we're building:
+- Start with the match table in `docs/SKILLS.md`.
+- Then **hunt** for anything better or missing for this PRD's stack: Anthropic's official marketplace (anthropics/claude-plugins-official), anthropics/skills, and the vendors' own repos for every tool the PRD names (e.g. Stripe, Sentry, WooCommerce). Check the n8n template library too if n8n is involved.
+- Also pick the matching connections from `docs/TOOLBOX.md` (payments, Google, WooCommerce, n8n).
+- Show Ed one table with 3 to 5 skills at most, plus connections: what each one is, why this project needs it, and a `Security:` line. Add only what he approves, record it in the PRD's Tech plan, and add any plugin repos to `.claude/update-watch.json`.
+- Found a good skill that isn't in `docs/SKILLS.md`? Propose adding it to the library for future projects.
+
+**Step 4: Build.**
+
+**During the project: keep skills current.** The daily update pass rechecks this project's skills. When the project changes (new feature, new integration, moving to launch), rerun a mini skill hunt for just that change. Add, update or remove skills with Ed's OK. For example, add `claude-security` before launch and remove it after.
 
 ## 2. Save credits
 - Plan first, build second. No trial-and-error coding.

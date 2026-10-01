@@ -10,11 +10,12 @@ Skills teach Claude how to do a specific kind of job well, like Stripe best prac
 Reviewed 2026-10-01 against Anthropic's official marketplace (`claude-plugins-official`, 315 plugins) and Anthropic's skills repo (`anthropics/skills`).
 
 ## How Claude picks them (every project)
-1. **At kickoff,** after the brief's answers, Claude matches the project against the table below and proposes **3 to 5 at most**. Each one comes with why it's needed and a `Security:` line.
+1. **After the PRD (`docs/PROJECT_BRIEF.md`) is approved,** never before, Claude runs the skill hunt: the match table below first, then a search of the official marketplace, anthropics/skills and the vendor repos for the PRD's stack. It proposes **3 to 5 at most**, each with why it's needed and a `Security:` line.
 2. **Ed approves** the list. Claude adds only the approved ones (see "How to add") and lists them in the brief's Tech plan.
-3. **In the daily update pass,** Claude checks whether a new official skill fits this project's stack, or an installed one changed. It proposes but never auto-adds.
-4. **Remove what's unused.** If a skill hasn't been needed for the project's current phase, propose removing it.
-5. **Prefer official:** vendor-made (Stripe, Sentry, Vercel, Automattic) or Anthropic over community. A community skill needs its scripts read before adding.
+3. **During the project:** the daily update pass rechecks this project's skills, and any change in scope (new integration, approaching launch) triggers a mini hunt for just that change.
+4. **In the daily update pass,** Claude checks whether a new official skill fits this project's stack, or an installed one changed. It proposes but never auto-adds.
+5. **Remove what's unused.** If a skill hasn't been needed for the project's current phase, propose removing it.
+6. **Prefer official:** vendor-made (Stripe, Sentry, Vercel, Automattic) or Anthropic over community. A community skill needs its scripts read before adding.
 
 ## Match table
 | If the project... | Add | Source | Security |

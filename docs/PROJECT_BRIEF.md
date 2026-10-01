@@ -1,4 +1,4 @@
-# Project Brief
+# Project Brief (PRD)
 
 > Filled in by Claude during the Kickoff Q&A. Ed approves before any code is written.
 
@@ -27,7 +27,7 @@ Personal / South Side DTF / Client: ______
 - Hosting:
 - Logins / payments / integrations:
 - MCP add-ons enabled (from TOOLBOX):
-- Skills/plugins added (from SKILLS.md, Ed-approved):
+- Skills/plugins added (skill hunt after PRD approval, Ed-approved):
 - Open-source repos or packages to reuse:
 
 ## Security plan
