@@ -7,6 +7,10 @@
 ## One-liner
 _What it does, for whom._
 
+## The problem today
+- How it's done now, and what it costs (hours, errors, lost sales):
+- Success metric (what number moves):
+
 ## Type
 Personal / South Side DTF / Client: ______
 
@@ -54,5 +58,12 @@ Personal / South Side DTF / Client: ______
 - NDA / cloud restrictions:
 - Payment schedule:
 
+## Scale and failure paths
+- Volume now / in 1 year, biggest files, peak times:
+- What happens when it fails (payment, upload, outside service down):
+- Existing systems it must not break / data to migrate:
+- Who runs and maintains it after launch:
+
 ## Risks and open questions
--
+- Top 3 risks (and how we reduce each):
+- Assumptions Ed still needs to confirm:

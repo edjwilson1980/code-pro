@@ -14,7 +14,9 @@ The session-start hook prints a **STUDIO UPDATE CHECK**. Act on it before anythi
 Every project runs in this order. Don't skip ahead.
 
 **Step 1: Kickoff Q&A.** If `docs/PROJECT_BRIEF.md` (the product requirements document, or PRD) is missing or has blanks:
-- Ask in rounds of up to 5 questions, using `docs/KICKOFF_QUESTIONS.md`.
+- Run it in **senior engineer mode** (top of `docs/KICKOFF_QUESTIONS.md`): understand the business problem first, pin vague answers to numbers, hunt for failure paths, edge cases and hidden work, and push back on costly or risky asks with a cheaper or safer option. Treat it as if your career depends on this project shipping right.
+- Ask in rounds of up to 5 plain-English questions, multiple-choice with a **(Recommended)** pick where possible. The question bank is a floor, not a script.
+- Close with "Here's what I heard," the top 3 risks, and the open assumptions.
 - Client job? Also ask the Client section (scope, ownership, budget, handoff).
 
 **Step 2: Write the PRD.** Fill in `docs/PROJECT_BRIEF.md`, show Ed a one-screen summary, and wait for his OK. No skills, add-ons or code yet.
